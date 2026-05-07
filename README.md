@@ -39,7 +39,7 @@ Unlike conventional QGIS styling workflows, RasterViz focuses on:
 
 # Key Features
 
-## 1. Rasterio-Style Scientific Rendering
+## Rasterio-Style Scientific Rendering
 
 RasterViz emulates the visual philosophy of Python scientific plotting libraries such as:
 
@@ -51,7 +51,7 @@ while remaining fully integrated inside QGIS through a graphical user interface.
 
 ---
 
-## 2. Continuous Single-Band Rendering
+## Continuous Single-Band Rendering
 
 Render grayscale or continuous raster datasets using advanced stretch methods:
 
@@ -74,9 +74,10 @@ Render grayscale or continuous raster datasets using advanced stretch methods:
 
 ---
 
-## 3. Discrete / Classified Raster Visualization
+## Discrete / Classified Raster Visualization
 
 RasterViz supports fully customized classified raster rendering.
+<img width="1920" height="1080" alt="Screenshot 2026-05-08 023559" src="https://github.com/user-attachments/assets/40073bb4-7204-41eb-907e-263f8881ace1" />
 
 ### Features
 
@@ -97,7 +98,7 @@ Ideal for:
 
 ---
 
-## 4. RGB Composite Rendering
+##  RGB Composite Rendering
 
 Generate professional RGB composite imagery directly inside QGIS.
 
@@ -112,7 +113,7 @@ Generate professional RGB composite imagery directly inside QGIS.
 
 ---
 
-## 5. Scientific Colorbar System
+## Scientific Colorbar System
 
 RasterViz includes a highly configurable scientific colorbar engine.
 
@@ -133,21 +134,9 @@ RasterViz includes a highly configurable scientific colorbar engine.
 
 ---
 
-## 6. Histogram Analysis Panel
 
-Interactive histogram visualization allows users to:
 
-* Analyze raster value distributions
-* Evaluate clipping boundaries
-* Optimize contrast stretch
-* Visualize percentile thresholds
-* Improve scientific interpretability
-
-Stretch boundaries are dynamically displayed within the histogram.
-
----
-
-## 7. Coordinate Formatting System
+## Coordinate Formatting System
 
 Multiple coordinate display formats are supported:
 
@@ -161,7 +150,7 @@ Suitable for scientific cartography and geospatial publications.
 
 ---
 
-## 8. Live Preview Engine
+## Live Preview Engine
 
 RasterViz uses cached NumPy arrays to accelerate rendering.
 
@@ -176,7 +165,7 @@ This significantly improves performance when working with large rasters.
 
 ---
 
-## 9. Publication-Quality Export
+## Publication-Quality Export
 
 Export visualization outputs directly into high-resolution scientific formats.
 
@@ -197,21 +186,7 @@ Suitable for:
 
 ---
 
-## 10. Domain-Specific Colormaps
 
-RasterViz includes custom scientific colormaps designed for remote sensing and environmental analysis.
-
-### Included Visualization Themes
-
-* Vegetation analysis
-* Biomass gradients
-* Water indices
-* Mangrove health
-* Thermal visualization
-* Elevation rendering
-* Classification palettes
-
-The plugin also supports Matplotlib colormaps.
 
 ---
 
