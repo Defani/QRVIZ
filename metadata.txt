@@ -1,0 +1,31 @@
+[general]
+name=RasterViz
+qgisMinimumVersion=3.0
+qgisMaximumVersion=3.99
+description=Scientific raster visualization plugin for QGIS — styled after rasterio.show(), with interactive GUI controls for colormap selection, percentile/minmax stretch, pointed colorbar, discrete class mapping, RGB composite, and histogram analysis.
+version=1.0.0
+author=Defani Arman Alfitriansyah
+email=lab@rs.ac.id
+about=RasterViz provides publication-quality raster visualization directly within QGIS, without requiring an external Python environment. The plugin replicates the rendering aesthetics of rasterio.show() through a fully interactive Qt5 GUI. Key capabilities include: single-band continuous rendering with configurable colormap and stretch (percentile, min-max, manual); discrete/classified raster rendering via per-class color and label assignment with automatic gridcode scanning; RGB three-band composite with independent per-band stretch; pointed colorbar with configurable geometry, orientation, and extend style (both, max, min, neither); coordinate tick formatting in DMS, DM, Decimal Degree, or native UTM/meter; real-time live preview backed by a cached NumPy array; and export to PNG (300 DPI), SVG, TIFF, and PDF. A standalone rendering module (raster_viz_demo.py) is also included for use outside QGIS in batch or notebook workflows. Built with PyQGIS, NumPy, Matplotlib (Qt5Agg backend), and PyQt5.
+tracker=https://github.com/Defani/rasterviz/issues
+repository=https://github.com/Defani/rasterviz
+homepage=https://github.com/Defani/rasterviz
+hasProcessingProvider=no
+tags=raster, visualization, colormap, legend, colorbar, remote sensing, ndvi, rgb composite, stretch, mangrove, biomass, sentinel-2, landsat, classification, discrete
+category=Raster
+icon=icon.png
+experimental=False
+deprecated=False
+changelog=
+    Version 1.0.0 (2026):
+    - Initial public release
+    - Single-band continuous rendering with percentile, min-max, and manual stretch
+    - Discrete/classified raster rendering with per-class color, label, and decimal configuration
+    - RGB three-band composite with independent per-band stretch
+    - Pointed colorbar with configurable geometry, orientation, and extend style
+    - Coordinate tick formatting: DMS, DM, Decimal Degree, UTM/meter
+    - Histogram analysis panel with stretch boundary annotations
+    - 20 domain-specific custom colormaps for remote sensing applications
+    - Live preview via cached NumPy array (no re-read on parameter change)
+    - Export to PNG (300 DPI), SVG, TIFF, PDF
+    - Standalone rendering module (raster_viz_demo.py) for use without QGIS
