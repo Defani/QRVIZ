@@ -177,6 +177,10 @@ Open QGIS and load a single-band GeoTIFF (e.g. an NDVI image derived from Sentin
 
 Launch the plugin via **Raster → QRVIZ → QRVIZ — Scientific Raster Visualization**, or click the toolbar icon.
 
+
+https://github.com/user-attachments/assets/43229022-5ed2-4978-8b63-0e794f954e4b
+
+
 In **Group 1**, either:
 - Click **OPEN RASTER FILE** to browse directly to a `.tif`, `.img`, or `.vrt`, or
 - Select an already-loaded layer from the **Layer** dropdown.
@@ -205,6 +209,10 @@ For an NDVI raster, set **Percentile**, `Pmin = 2`, `Pmax = 98`. The canvas upda
 
 ### 3. Choose a Colormap
 
+
+https://github.com/user-attachments/assets/9c410ae5-5bf6-426d-8e4b-c6c43d1b9ed4
+
+
 Use the **◀ ▶** arrows in Group 2 to cycle through the colormap library. A colour ramp preview is shown inline.
 
 For vegetation mapping, recommended palettes:
@@ -222,6 +230,10 @@ Enable **Reverse** to invert any palette (e.g. for SAR backscatter where bright 
 
 ### 4. Tune Coordinate Labels
 
+
+https://github.com/user-attachments/assets/22b17462-122c-447a-a239-de7761c4976c
+
+
 In **Group 6 — Map Geometry & Coordinates**:
 
 1. Set **Coord Format** to `D (Decimal Degree)` for standard geographic layers.
@@ -236,6 +248,10 @@ In **Group 6 — Map Geometry & Coordinates**:
 
 In **Group 7 — Colorbar Layout**:
 
+
+https://github.com/user-attachments/assets/649f535d-ab7b-485d-859e-70d888b7b099
+
+
 1. Set **Orientation** = `horizontal`.
 2. Set **End Style** = `Both Pointed` — replicates the rasterio aesthetic.
 3. Set **Colorbar Label** = `NDVI`.
@@ -249,6 +265,10 @@ The canvas updates live with every change.
 ### 6. Export
 
 In **Group 3**, click **EXPORT IMAGE**. Choose PNG for raster output at 300 DPI, or PDF / SVG for vector-preserving formats.
+
+
+https://github.com/user-attachments/assets/c7030b7b-450f-4e09-81d7-db49638dab80
+
 
 ---
 
