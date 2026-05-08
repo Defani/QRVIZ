@@ -327,124 +327,10 @@ nav {
   letter-spacing: .5px;
 }
 
-.plugin-ui {
-  display: grid;
-  grid-template-columns: 270px 1fr 280px;
-  min-height: 400px;
-  font-size: 12px;
-}
-
-.ui-panel {
-  padding: 10px;
-  overflow: hidden;
-}
-.ui-panel.left { border-right: 1px solid var(--border); background: #0d1422; }
-.ui-panel.centre { background: #121926; }
-.ui-panel.right { border-left: 1px solid var(--border); background: #0d1422; }
-
-.ui-grp {
-  border: 1px solid rgba(79,143,255,0.15);
-  border-radius: 7px;
-  margin-bottom: 8px;
-  overflow: hidden;
-}
-.ui-grp-hd {
-  background: rgba(79,143,255,0.07);
-  padding: 5px 9px;
-  font-size: 10.5px;
-  font-weight: 600;
-  color: #7eb8ff;
-  letter-spacing: .4px;
-  border-bottom: 1px solid rgba(79,143,255,0.12);
-  font-family: var(--mono);
-}
-.ui-grp-bd { padding: 8px 9px; display: flex; flex-direction: column; gap: 5px; }
-
-.ui-row { display: flex; align-items: center; gap: 5px; }
-.ui-lbl { font-size: 10px; color: var(--text3); min-width: 52px; flex-shrink: 0; }
-.ui-inp {
-  flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 3px; padding: 2px 6px; font-size: 10px; color: var(--text2);
-  font-family: var(--mono);
-}
-.ui-inp-sm { width: 40px; flex: none; }
-.ui-sel {
-  flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 3px; padding: 2px 5px; font-size: 10px; color: var(--text2);
-}
-.ui-btn {
-  width: 100%; padding: 5px; text-align: center; font-size: 10.5px; font-weight: 600;
-  border-radius: 4px; background: rgba(79,143,255,0.2); color: #7eb8ff;
-  border: 1px solid rgba(79,143,255,0.3); cursor: pointer; font-family: var(--mono);
-}
-.ui-btn.pri { background: rgba(29,78,216,0.6); color: #93c5fd; border-color: #3b82f6; }
-.ui-check { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text2); }
-.ui-check-box { width: 11px; height: 11px; border: 1px solid rgba(79,143,255,0.4); border-radius: 2px; background: rgba(79,143,255,0.2); flex-shrink: 0; }
-
-/* canvas area */
-.canvas-area {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-.mpl-bar {
-  background: rgba(0,0,0,0.3);
-  border-bottom: 1px solid var(--border);
-  padding: 4px 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 10px;
-  color: var(--text3);
-}
-.raster-preview {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-}
-.cbar-strip {
-  height: 30px;
-  padding: 4px 20px 0;
-  position: relative;
-}
-.cbar-inner {
-  height: 14px;
-  border-radius: 2px;
-  position: relative;
-}
-.cbar-inner::before {
-  content: '';
-  position: absolute;
-  left: -9px; top: 0;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-right: 9px solid #1a2a3a;
-}
-.cbar-inner::after {
-  content: '';
-  position: absolute;
-  right: -9px; top: 0;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 9px solid #0d4a1a;
-}
-.cbar-ticks {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 0;
-  font-size: 8.5px;
-  color: var(--text3);
-  font-family: var(--mono);
-  margin-top: 2px;
-}
-.status-bar {
-  background: rgba(0,0,0,0.4);
-  padding: 3px 10px;
-  font-size: 9.5px;
-  color: var(--text3);
-  font-family: var(--mono);
-  border-top: 1px solid var(--border);
+.plugin-screenshot {
+  width: 100%;
+  display: block;
+  height: auto;
 }
 
 /* ── MAIN LAYOUT ── */
@@ -542,7 +428,6 @@ main { position: relative; z-index: 1; }
 .tok-str { color: #c3e88d; }
 .tok-cm { color: #546e7a; font-style: italic; }
 .tok-num { color: #f78c6c; }
-.tok-sep { color: var(--border2); display: block; border-top: 1px dashed var(--border); margin: 10px 0; padding-top: 10px; font-size: 10px; text-align: center; letter-spacing: 2px; color: var(--text3); }
 
 .overview-prose {
   display: flex;
@@ -777,8 +662,8 @@ code {
 /* ── QUICK START ── */
 .tutorial-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
 }
 
 .tutorial-card {
@@ -789,6 +674,8 @@ code {
   position: relative;
   overflow: hidden;
   transition: border-color .25s;
+  display: flex;
+  flex-direction: column;
 }
 .tutorial-card:hover { border-color: rgba(79,143,255,.3); }
 
@@ -814,13 +701,21 @@ code {
 }
 
 .tutorial-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
-.tutorial-card p { font-size: 13px; color: var(--text2); line-height: 1.65; }
+.tutorial-card p { font-size: 13px; color: var(--text2); line-height: 1.65; margin-bottom: 14px; flex-grow: 1; }
+
+.tut-video {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #000;
+  display: block;
+  margin-top: auto;
+}
 
 .tut-params {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-top: 12px;
 }
 
 .tut-param {
@@ -950,32 +845,6 @@ footer {
   margin: 0 auto;
 }
 
-/* ── STRETCH TABLE ── */
-.stretch-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 14px;
-  font-size: 13px;
-}
-.stretch-table th {
-  text-align: left;
-  font-size: 11px;
-  font-family: var(--mono);
-  color: var(--text3);
-  letter-spacing: .5px;
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--border);
-  text-transform: uppercase;
-}
-.stretch-table td {
-  padding: 9px 12px;
-  color: var(--text2);
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-}
-.stretch-table td:first-child { font-family: var(--mono); color: var(--accent2); font-size: 12px; }
-.stretch-table tr:last-child td { border-bottom: none; }
-
 /* ── EXPORT TABLE ── */
 .export-grid {
   display: grid;
@@ -998,12 +867,9 @@ footer {
   margin-bottom: 5px;
 }
 .export-dpi { font-size: 11px; font-family: var(--mono); color: var(--green); margin-bottom: 6px; }
-.export-note { font-size: 11px; color: var(--text3); }
 
 @media (max-width: 900px) {
   .overview-grid { grid-template-columns: 1fr; }
-  .plugin-ui { grid-template-columns: 1fr; }
-  .ui-panel.left, .ui-panel.right { display: none; }
   nav { padding: 0 20px; }
   .nav-links { display: none; }
   .section { padding: 60px 20px; }
@@ -1013,7 +879,6 @@ footer {
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
     <div class="nav-logo-mark">RV</div>
@@ -1030,7 +895,6 @@ footer {
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
 
@@ -1068,7 +932,6 @@ footer {
   </div>
 </section>
 
-<!-- PLUGIN SCREENSHOT MOCKUP -->
 <div class="screenshot-wrap">
   <div class="screenshot-frame">
     <div class="frame-titlebar">
@@ -1077,105 +940,12 @@ footer {
       <span class="frame-dot fd-g"></span>
       <span class="frame-title">RasterViz — Scientific Raster Visualization &nbsp;|&nbsp; QGIS 3.x</span>
     </div>
-    <div class="plugin-ui">
-      <!-- LEFT -->
-      <div class="ui-panel left">
-        <div class="ui-grp">
-          <div class="ui-grp-hd">1. Layer &amp; Band</div>
-          <div class="ui-grp-bd">
-            <div class="ui-btn pri">OPEN RASTER FILE</div>
-            <div class="ui-row"><span class="ui-lbl">Layer:</span><select class="ui-sel"><option>NDVI_S2_2024.tif</option></select></div>
-            <div class="ui-row" style="gap:14px"><label class="ui-check"><span class="ui-check-box" style="background:rgba(79,143,255,.4)"></span>Single Band</label><label class="ui-check"><span class="ui-check-box"></span>RGB</label></div>
-            <div class="ui-row"><span class="ui-lbl">Band:</span><input class="ui-inp ui-inp-sm" value="1"></div>
-            <div class="ui-btn pri" style="margin-top:4px">READ DATA &amp; RENDER</div>
-          </div>
-        </div>
-        <div class="ui-grp">
-          <div class="ui-grp-hd">2. Color Mode &amp; Stretch</div>
-          <div class="ui-grp-bd">
-            <div class="ui-row" style="gap:0;margin-bottom:6px">
-              <div style="flex:1;padding:4px 6px;background:rgba(79,143,255,.12);color:#7eb8ff;font-size:10px;border-radius:3px 0 0 3px;text-align:center;border:1px solid rgba(79,143,255,.25)">🎨 Continuous</div>
-              <div style="flex:1;padding:4px 6px;color:#5a7099;font-size:10px;border-radius:0 3px 3px 0;text-align:center;border:1px solid rgba(255,255,255,.06)">🗂 Discrete</div>
-            </div>
-            <div class="ui-row"><span class="ui-lbl">Stretch:</span><select class="ui-sel"><option>Percentile</option></select></div>
-            <div class="ui-row"><span class="ui-lbl">Pmin %:</span><input class="ui-inp ui-inp-sm" value="2"><span class="ui-lbl" style="min-width:36px;text-align:right">Pmax:</span><input class="ui-inp ui-inp-sm" value="98"></div>
-            <div style="height:18px;border-radius:3px;border:1px solid rgba(79,143,255,.2);background:linear-gradient(90deg,#ffffff,#CE7E45,#FCD163,#99B718,#3E8601,#004C00);margin:2px 0"></div>
-            <div style="font-size:9.5px;color:#5a7099;font-family:'DM Mono',monospace;text-align:center">NDVI_Custom</div>
-            <div class="ui-check"><span class="ui-check-box" style="background:rgba(79,143,255,.4)"></span>Reverse colormap</div>
-            <div class="ui-check"><span class="ui-check-box" style="background:rgba(79,143,255,.4)"></span>Transparent Nodata</div>
-          </div>
-        </div>
-        <div class="ui-grp">
-          <div class="ui-grp-hd">3. Export</div>
-          <div class="ui-grp-bd"><div class="ui-btn">EXPORT IMAGE</div></div>
-        </div>
-      </div>
-
-      <!-- CENTRE -->
-      <div class="ui-panel centre" style="padding:0">
-        <div class="canvas-area">
-          <div class="mpl-bar">
-            <span>⌂</span><span>✥</span><span>⊕</span><span>⊖</span><span>💾</span>
-            <span style="margin-left:auto">x=107.3421  y=−7.1234</span>
-          </div>
-          <div class="raster-preview">
-            <canvas id="hero-raster" width="560" height="290" style="width:100%;height:290px;display:block"></canvas>
-          </div>
-          <div class="cbar-strip">
-            <div class="cbar-inner" style="background:linear-gradient(90deg,#ffffff,#CE7E45,#F1B555,#FCD163,#99B718,#3E8601,#004C00)"></div>
-            <div class="cbar-ticks"><span>−1.00</span><span>−0.50</span><span>0.00</span><span>0.50</span><span>1.00</span></div>
-          </div>
-          <div class="status-bar">Data ready — live preview from cached NumPy array. &nbsp;RasterViz v1.1.0 active.</div>
-        </div>
-      </div>
-
-      <!-- RIGHT -->
-      <div class="ui-panel right">
-        <div class="ui-grp">
-          <div class="ui-grp-hd">4. Display Control</div>
-          <div class="ui-grp-bd">
-            <div class="ui-row"><span class="ui-lbl">BG:</span><select class="ui-sel"><option>Soft Black</option></select></div>
-            <div class="ui-check"><span class="ui-check-box" style="background:rgba(79,143,255,.4)"></span>Show Colorbar / Legend</div>
-            <div class="ui-check"><span class="ui-check-box" style="background:rgba(79,143,255,.4)"></span>Show Coordinate Axes</div>
-            <div class="ui-check"><span class="ui-check-box" style="background:rgba(79,143,255,.4)"></span>Show Grid Lines</div>
-          </div>
-        </div>
-        <div class="ui-grp">
-          <div class="ui-grp-hd">5. Title &amp; Font</div>
-          <div class="ui-grp-bd">
-            <div class="ui-row"><span class="ui-lbl">Font:</span><select class="ui-sel"><option>DM Sans</option></select></div>
-            <div class="ui-row"><span class="ui-lbl">Title:</span><input class="ui-inp" value="NDVI — Sentinel-2 2024"></div>
-            <div class="ui-row"><span class="ui-lbl">Size:</span><input class="ui-inp ui-inp-sm" value="14"></div>
-          </div>
-        </div>
-        <div class="ui-grp">
-          <div class="ui-grp-hd">6. Map Geometry &amp; Coordinates</div>
-          <div class="ui-grp-bd">
-            <div class="ui-row"><span class="ui-lbl">Format:</span><select class="ui-sel"><option>D (Decimal Degree)</option></select></div>
-            <div class="ui-row"><span class="ui-lbl">Font sz:</span><input class="ui-inp ui-inp-sm" value="9"><span class="ui-lbl" style="min-width:36px">Dec:</span><input class="ui-inp ui-inp-sm" value="4"></div>
-            <div style="font-size:9.5px;color:#7eb8ff;font-weight:600;margin:4px 0 2px;font-family:'DM Mono',monospace">Label Rotation</div>
-            <div class="ui-row"><span class="ui-lbl">X-axis:</span><input class="ui-inp" type="range" min="0" max="360" value="45" style="flex:1"><span style="font-size:9px;color:#e2e8f0;min-width:24px;font-family:'DM Mono',monospace">45°</span></div>
-            <div class="ui-row"><span class="ui-lbl">Y-axis:</span><input class="ui-inp" type="range" min="0" max="360" value="0" style="flex:1"><span style="font-size:9px;color:#e2e8f0;min-width:24px;font-family:'DM Mono',monospace">0°</span></div>
-            <div class="ui-row"><span class="ui-lbl">X Ticks:</span><input class="ui-inp ui-inp-sm" value="5"><span class="ui-lbl" style="min-width:38px">Y:</span><input class="ui-inp ui-inp-sm" value="5"></div>
-          </div>
-        </div>
-        <div class="ui-grp">
-          <div class="ui-grp-hd">7. Colorbar Layout</div>
-          <div class="ui-grp-bd">
-            <div class="ui-row"><span class="ui-lbl">Orient:</span><select class="ui-sel"><option>horizontal</option></select></div>
-            <div class="ui-row"><span class="ui-lbl">End:</span><select class="ui-sel"><option>Both Pointed</option></select></div>
-            <div class="ui-row"><span class="ui-lbl">Label:</span><input class="ui-inp" value="NDVI"></div>
-            <div class="ui-row"><span class="ui-lbl">Ticks:</span><input class="ui-inp ui-inp-sm" value="5"><span class="ui-lbl" style="min-width:28px">Dec:</span><input class="ui-inp ui-inp-sm" value="2"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <img src="https://github.com/user-attachments/assets/f92844e1-226f-4b19-a7ef-ccb12d334575" alt="RasterViz Plugin UI" class="plugin-screenshot">
   </div>
 </div>
 
 <main>
 
-<!-- OVERVIEW -->
 <section class="section" id="overview">
   <div class="section-label">Overview</div>
   <div class="section-title">Replace your rasterio scripts<br>with zero lines of code</div>
@@ -1244,7 +1014,6 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
 
 <div class="divider"></div>
 
-<!-- FEATURES -->
 <section class="section" id="features">
   <div class="section-label">Features</div>
   <div class="section-title">Every control a researcher needs</div>
@@ -1345,7 +1114,6 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
 
 <div class="divider"></div>
 
-<!-- COLORMAPS -->
 <section class="section" id="colormaps">
   <div class="section-label">Colormaps</div>
   <div class="section-title">24 domain-specific palettes<br>+ full Matplotlib library</div>
@@ -1362,7 +1130,6 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
 
 <div class="divider"></div>
 
-<!-- DEPENDENCIES -->
 <section class="section">
   <div class="section-label">Dependencies</div>
   <div class="section-title">Zero additional installation</div>
@@ -1406,7 +1173,6 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
 
 <div class="divider"></div>
 
-<!-- INSTALLATION -->
 <section class="section" id="install">
   <div class="section-label">Installation</div>
   <div class="section-title">Three ways to install</div>
@@ -1459,7 +1225,6 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
 
 <div class="divider"></div>
 
-<!-- QUICK START -->
 <section class="section" id="quickstart">
   <div class="section-label">Quick Start</div>
   <div class="section-title">Six steps to a publication figure</div>
@@ -1471,6 +1236,7 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
       <div class="tut-step-label">Step 01</div>
       <h3>Open a Raster Layer</h3>
       <p>Load a single-band GeoTIFF (e.g. NDVI from Sentinel-2) into QGIS. Launch RasterViz from <code>Raster → QRVIZ</code>. Select the layer from the dropdown, set Band: 1, and click <strong>READ DATA &amp; RENDER</strong>.</p>
+      <video src="https://github.com/user-attachments/assets/43229022-5ed2-4978-8b63-0e794f954e4b" autoplay loop muted playsinline class="tut-video"></video>
     </div>
 
     <div class="tutorial-card">
@@ -1490,11 +1256,7 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
       <div class="tut-step-label">Step 03</div>
       <h3>Choose a Colormap</h3>
       <p>Use the ◀ ▶ arrows to cycle through palettes. A colour ramp preview is shown inline. Enable <strong>Reverse</strong> to invert any palette.</p>
-      <div class="tut-params">
-        <div class="tut-param"><span class="tut-param-key">Vegetation</span><span class="tut-param-val">NDVI_Custom</span></div>
-        <div class="tut-param"><span class="tut-param-key">Mangrove</span><span class="tut-param-val">Mangrove</span></div>
-        <div class="tut-param"><span class="tut-param-key">SAR</span><span class="tut-param-val">SAR_Backscatter</span></div>
-      </div>
+      <video src="https://github.com/user-attachments/assets/9c410ae5-5bf6-426d-8e4b-c6c43d1b9ed4" autoplay loop muted playsinline class="tut-video"></video>
     </div>
 
     <div class="tutorial-card">
@@ -1502,12 +1264,7 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
       <div class="tut-step-label">Step 04</div>
       <h3>Tune Coordinate Labels</h3>
       <p>In Group 6, set coordinate format, decimal places, tick count, and rotation for X and Y axes independently.</p>
-      <div class="tut-params">
-        <div class="tut-param"><span class="tut-param-key">Format</span><span class="tut-param-val">Decimal Degree</span></div>
-        <div class="tut-param"><span class="tut-param-key">X rotation</span><span class="tut-param-val">45°</span></div>
-        <div class="tut-param"><span class="tut-param-key">Y rotation</span><span class="tut-param-val">0°</span></div>
-        <div class="tut-param"><span class="tut-param-key">Decimals</span><span class="tut-param-val">4</span></div>
-      </div>
+      <video src="https://github.com/user-attachments/assets/22b17462-122c-447a-a239-de7761c4976c" autoplay loop muted playsinline class="tut-video"></video>
     </div>
 
     <div class="tutorial-card">
@@ -1515,12 +1272,7 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
       <div class="tut-step-label">Step 05</div>
       <h3>Style the Colorbar</h3>
       <p>In Group 7, choose orientation, end style, label, and tick settings. <strong>Both Pointed</strong> replicates the rasterio aesthetic.</p>
-      <div class="tut-params">
-        <div class="tut-param"><span class="tut-param-key">Orientation</span><span class="tut-param-val">horizontal</span></div>
-        <div class="tut-param"><span class="tut-param-key">End style</span><span class="tut-param-val">Both Pointed</span></div>
-        <div class="tut-param"><span class="tut-param-key">Tick Count</span><span class="tut-param-val">5</span></div>
-        <div class="tut-param"><span class="tut-param-key">Tick Dec</span><span class="tut-param-val">2</span></div>
-      </div>
+      <video src="https://github.com/user-attachments/assets/649f535d-ab7b-485d-859e-70d888b7b099" autoplay loop muted playsinline class="tut-video"></video>
     </div>
 
     <div class="tutorial-card">
@@ -1528,31 +1280,13 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
       <div class="tut-step-label">Step 06</div>
       <h3>Export</h3>
       <p>Click <strong>EXPORT IMAGE</strong> in Group 3. Choose PNG for journal submission at 300 DPI, PDF/SVG for posters and slides.</p>
-      <div class="export-grid" style="grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px">
-        <div class="export-card" style="padding:10px 8px">
-          <div class="export-fmt" style="font-size:14px">PNG</div>
-          <div class="export-dpi">300 DPI</div>
-        </div>
-        <div class="export-card" style="padding:10px 8px">
-          <div class="export-fmt" style="font-size:14px">PDF</div>
-          <div class="export-dpi">150 DPI</div>
-        </div>
-        <div class="export-card" style="padding:10px 8px">
-          <div class="export-fmt" style="font-size:14px">SVG</div>
-          <div class="export-dpi">vector</div>
-        </div>
-        <div class="export-card" style="padding:10px 8px">
-          <div class="export-fmt" style="font-size:14px">TIFF</div>
-          <div class="export-dpi">300 DPI</div>
-        </div>
-      </div>
+      <video src="https://github.com/user-attachments/assets/c7030b7b-450f-4e09-81d7-db49638dab80" autoplay loop muted playsinline class="tut-video"></video>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CODEBASE -->
 <section class="section" id="codebase">
   <div class="section-label">Codebase</div>
   <div class="section-title">1,895 lines · 4 Python files</div>
@@ -1593,7 +1327,6 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
 
 <div class="divider"></div>
 
-<!-- CITATION -->
 <section class="section">
   <div class="section-label">Citation</div>
   <div class="section-title">Cite in your research</div>
@@ -1606,7 +1339,6 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
 
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-left">
     <div class="footer-logo">RV</div>
@@ -1624,7 +1356,6 @@ plt.<span class="tok-fn">savefig</span>(<span class="tok-str">"ndvi.png"</span>,
 </footer>
 
 <script>
-/* ── Raster canvas render ── */
 function lerp(a,b,t){return a+(b-a)*t}
 function hexToRgb(h){return[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)]}
 function interpColor(stops,t){
@@ -1633,55 +1364,6 @@ function interpColor(stops,t){
   const f=seg-i;
   const a=hexToRgb(stops[i]),b=hexToRgb(stops[i+1]);
   return[Math.round(lerp(a[0],b[0],f)),Math.round(lerp(a[1],b[1],f)),Math.round(lerp(a[2],b[2],f))];
-}
-
-const NDVI_STOPS=['#FFFFFF','#CE7E45','#DF923D','#F1B555','#FCD163','#99B718','#74A901','#66A000','#3E8601','#207401','#004C00'];
-
-function drawHeroRaster(){
-  const cv=document.getElementById('hero-raster');
-  if(!cv)return;
-  const ctx=cv.getContext('2d');
-  const W=cv.width,H=cv.height;
-  const img=ctx.createImageData(W,H);
-  for(let y=0;y<H;y++){
-    for(let x=0;x<W;x++){
-      const nx=x/W,ny=y/H;
-      const v=
-        0.35*Math.sin(nx*9+0.8)+
-        0.25*Math.cos(ny*7+0.4)+
-        0.2*Math.sin((nx+ny)*5+1.2)+
-        0.1*Math.sin(nx*18+ny*14)+
-        0.55;
-      const t=Math.max(0,Math.min(1,v));
-      const [r,g,b]=interpColor(NDVI_STOPS,t);
-      const idx=(y*W+x)*4;
-      img.data[idx]=r;img.data[idx+1]=g;img.data[idx+2]=b;img.data[idx+3]=255;
-    }
-  }
-  ctx.putImageData(img,0,0);
-
-  /* coordinate grid overlay */
-  ctx.strokeStyle='rgba(255,255,255,0.15)';
-  ctx.lineWidth=0.8;
-  ctx.setLineDash([4,4]);
-  for(let i=1;i<5;i++){
-    ctx.beginPath();ctx.moveTo(i*W/5,0);ctx.lineTo(i*W/5,H);ctx.stroke();
-  }
-  for(let j=1;j<4;j++){
-    ctx.beginPath();ctx.moveTo(0,j*H/4);ctx.lineTo(W,j*H/4);ctx.stroke();
-  }
-
-  /* y-axis labels */
-  ctx.fillStyle='rgba(140,163,200,0.9)';
-  ctx.font='9px DM Mono,monospace';
-  ctx.textAlign='right';
-  const yLabels=['-6.80°S','-6.95°S','-7.10°S','-7.25°S'];
-  yLabels.forEach((l,i)=>{ctx.fillText(l,W-4,(i+1)*H/4-4);});
-
-  /* x-axis labels */
-  ctx.textAlign='center';
-  const xLabels=['107.18°E','107.26°E','107.34°E','107.42°E'];
-  xLabels.forEach((l,i)=>{ctx.fillText(l,(i+1)*W/5,H-5);});
 }
 
 /* ── Colormap grid ── */
@@ -1747,7 +1429,6 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 /* init */
 window.addEventListener('load',()=>{
-  drawHeroRaster();
   buildCmapGrid();
 });
 </script>
