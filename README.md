@@ -111,7 +111,8 @@ Then in QGIS: **Plugins → Manage and Install Plugins → Installed** — tick 
 
 ## Plugin Interface
 
-<img width="1920" height="1080" alt="Screenshot 2026-05-08 015933" src="https://github.com/user-attachments/assets/f92844e1-226f-4b19-a7ef-ccb12d334575" />
+<img width="1920" height="1080" alt="Screenshot 2026-05-09 175743" src="https://github.com/user-attachments/assets/f7f9681c-5d44-42c7-9fd0-674c364b42d2" />
+
 
 
 
