@@ -98,6 +98,8 @@ https://github.com/user-attachments/assets/b2b6a02a-940a-42a9-8f3d-ee696b542c3e
 - Alignment: left · center · right
 - Label padding, multi-column layout (1–10 columns)
 - Nodata colour with alpha channel support
+<img width="1920" height="1080" alt="Screenshot 2026-05-09 231859" src="https://github.com/user-attachments/assets/f12a90ff-9576-40c7-a0a8-61e1d7066de8" />
+<img width="1920" height="1080" alt="Desain tanpa judul (6)" src="https://github.com/user-attachments/assets/44ee310b-5801-4cfa-9a3a-7931d01316fe" />
 
 ### Coordinate Labels
 
@@ -115,6 +117,10 @@ https://github.com/user-attachments/assets/b2b6a02a-940a-42a9-8f3d-ee696b542c3e
 ### Interactive Drag System
 
 Activate **✋ Drag Elements** in the top toolbar. Then drag:
+
+
+https://github.com/user-attachments/assets/d259ed41-7c18-4e7d-b863-58c4445e9f7a
+
 
 - Continuous colorbar
 - Discrete legend
